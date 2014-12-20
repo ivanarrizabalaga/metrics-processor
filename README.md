@@ -112,3 +112,24 @@ Content-Length: 0
 Date: Sat, 20 Dec 2014 11:58:19 GMT
 
 ```
+
+Finally, since metric values should be checked independently, an additional find operation has been added:
+```
+curl http://localhost:8080/measurements/search/findByKey?key=jvm-usage
+{
+  "_embedded" : {
+    "measurements" : [ {
+      "key" : "jvm-usage",
+      "host" : "http://localhost",
+      "timeStamp" : "2014-12-20T12:25:24.216+0000",
+      "value" : null,
+      "error" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/measurements/54955c2a44ae496a41e4612a"
+        }
+      }
+    } ]
+  }
+}
+```
