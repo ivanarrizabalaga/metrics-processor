@@ -13,6 +13,16 @@ target/
 *.war
 *.ear
 *.db
+
+######################
+# Gradle files
+######################
+
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
  
 ######################
 # Windows
