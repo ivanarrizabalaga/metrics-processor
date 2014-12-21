@@ -27,6 +27,7 @@ The metrics processor system runs on top of:
  * Run directly with gradle: ./gradlew bootRun
  * Build: ./gradlew build
  * From jar: java -jar build/libs/metrics-processor-0.1.0.jar
+ * Change default port: java -Dserver.port=8081 -jar build/libs/metrics-processor-0.1.0.jar
 
 ###Usage
 
