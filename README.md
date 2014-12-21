@@ -5,7 +5,6 @@ Super simple metrics processor that receives events from a metrics collector and
 ### Data format
 Each saved record has the following structure:
  * key: The id that identifies the metrics measured (Ex: 'jvm-usage').
- * host: The host that sends the measurement (Ex: 'http://www.liferay.com').
  * timeStamp: When was the measurement taken.
  * value: The value of the measurement whatever that means.
  * error: An optional error message describing what went wrong while capturing the measurement.
@@ -58,7 +57,6 @@ $ curl http://localhost:8080/measurements
   "_embedded" : {
     "measurements" : [ {
       "key" : "num-registered-users",
-      "host" : "http://localhost",
       "timeStamp" : "2015-12-20T00:00:00.000+0000",
       "value" : 3.0,
       "error" : null,
@@ -69,7 +67,6 @@ $ curl http://localhost:8080/measurements
       }
     }, {
       "key" : "jvm-usage",
-      "host" : "http://localhost",
       "timeStamp" : "2013-03-03T21:15:00.030+0000",
       "value" : 0.10,
       "error" : null,
@@ -92,7 +89,6 @@ Get one specific measurement:
 $ curl http://localhost:8080/measurements/54955e1d44ae0f9f7ed65828
 {
   "key" : "jvm-usage",
-  "host" : "http://localhost",
   "timeStamp" : "2013-03-03T21:15:00.030+0000",
   "value" : 0.10,
   "error" : null,
@@ -121,7 +117,6 @@ curl http://localhost:8080/measurements/search/findByKey?key=jvm-usage
   "_embedded" : {
     "measurements" : [ {
       "key" : "jvm-usage",
-      "host" : "http://localhost",
       "timeStamp" : "2014-12-20T12:25:24.216+0000",
       "value" : null,
       "error" : null,

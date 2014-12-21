@@ -20,10 +20,7 @@ public class Measurement{
 	 * Key that identifies the metric (Ex: 'jvm-usage')
 	 */
 	private String key;
-	/**
-	 * Host that sent the measurement (Ex: 'http://localhost')
-	 */
-	private String host;
+	
 	/**
 	 * When was the measurement captured
 	 */
@@ -45,14 +42,6 @@ public class Measurement{
 
 	public void setKey(String firstName) {
 		this.key = firstName;
-	}
-
-	public String getHost() {
-		return host;
-	}
-
-	public void setHost(String lastName) {
-		this.host = lastName;
 	}
 
 	public Date getTimeStamp() {
